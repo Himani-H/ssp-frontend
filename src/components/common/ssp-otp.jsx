@@ -1,5 +1,6 @@
 import React from "react";
 import { MuiOtpInput } from "mui-one-time-password-input";
+import OtpTimer from 'otp-timer'
 import { Box, Button, Typography, Container, Grid } from "@mui/material";
 
 export default function OtpUI() {
@@ -8,6 +9,9 @@ export default function OtpUI() {
   const handleChange = (newValue) => {
     setOtp(newValue);
   };
+  const handleClick=()=>{
+    //desired function to be performed on clicking resend button
+  }
   return (
     <Grid>
       <Box sx={{padding: 5}}>
@@ -43,6 +47,9 @@ export default function OtpUI() {
             Verify and Proceed
           </Button>
         </Box>
+        <div>
+        <OtpTimer seconds= {30} minutes={1} resend={handleClick} />
+      </div>
       </Box>
     </Grid>
   );

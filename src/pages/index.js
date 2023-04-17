@@ -1,9 +1,11 @@
 import Header from "../components/common/ssp-header";
 import Footer from "../components/common/ssp-footer";
 import Card from "../components/common/ssp-card";
+import Guide from "../components/common/ssp-guide";
 import Stepper from "../components/common/ssp-stepper";
 import SideImage from "../components/common/ssp-image";
 import OtpUi from "../components/common/ssp-otp";
+import Loader from "../components/common/ssp-loader";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Box, Container, CssBaseline, Stack } from "@mui/material";
 
@@ -22,7 +24,7 @@ export default function Home() {
         {/* <Box sx={{ padding: 2 }}>
           <Stepper />
         </Box> */}
-        <Box>
+        <Box> 
           {/* <Card /> */}
           <Box>
               <Stack direction="row"  justifyContent="space-between">
@@ -30,6 +32,8 @@ export default function Home() {
                 <OtpUi />
               </Stack>
             </Box>
+            {/* <Guide /> */}
+            {/* <Loader /> */}
         </Box>
 
         {/* <Footer /> */}
