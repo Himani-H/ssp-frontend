@@ -21,20 +21,12 @@ export default function Home() {
       <ThemeProvider theme={theme}>
         <Header />
         <CssBaseline />
-        {/* <Box sx={{ padding: 2 }}>
-          <Stepper />
-        </Box> */}
-        <Box> 
-          {/* <Card /> */}
           <Box>
-              <Stack direction="row"  justifyContent="space-between">
-                <SideImage />
-                <OtpUi />
-              </Stack>
-            </Box>
-            {/* <Guide /> */}
-            {/* <Loader /> */}
-        </Box>
+            <Stack direction="row" justifyContent="space-between">
+              {/* <SideImage /> */}
+              <OtpUi />
+            </Stack>
+          </Box>
 
         {/* <Footer /> */}
       </ThemeProvider>
