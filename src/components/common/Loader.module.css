@@ -50,3 +50,14 @@
     -webkit-transform: scaleY(1.0);
   }
 }
+
+.otp > div{
+  font-size: 14px !important;
+  font-weight: 600;
+  line-height: 16.41px;
+  white-space: nowrap;
+}
+.otp > div > button{
+  font-size: 14px !important;
+  white-space: nowrap;
+}
