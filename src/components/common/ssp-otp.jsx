@@ -56,7 +56,7 @@ export default function OtpUI() {
             <Button
               variant="contained"
               fullWidth={true}
-              disabled={!otp}
+              disabled={otp.length < 6}
               component="div"
               onClick={verifyOTP}
             >
