@@ -8,7 +8,7 @@ export default function Header() {
     <AppBar position="static" sx={{ backgroundColor: "white" }}>
       <Toolbar>
         <div className={styles.custome_size} style={{ position: "relative" }}>
-          <Image src="/logo.svg" alt="SIXT" layout="fill" />
+          <Image src="/ssp-logo.svg" alt="SIXT" layout="fill" />
         </div>
       </Toolbar>
     </AppBar>
