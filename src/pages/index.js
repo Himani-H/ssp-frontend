@@ -1,15 +1,19 @@
-// import Head from "next/head";
-// import Image from "next/image";
-import { Inter } from "next/font/google";
-// import styles from "@/styles/Home.module.css";
-const inter = Inter({ subsets: ["latin"] });
+import Welcome from "./../components/welcome";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
-const theme = createTheme({
-  typography: {
-    fontFamily: ["Roboto"].join(","),
-  },
-});
+export default function WelcomePage() {
+  const { push } = useRouter();
 
-export default function ImageSample() {
-  return <ThemeProvider theme={theme}></ThemeProvider>;
+  useEffect(() => {
+    setTimeout(() => {
+      push("/authenticate");
+    }, 200);
+  });
+
+  return (
+    <>
+      <Welcome />
+    </>
+  );
 }
