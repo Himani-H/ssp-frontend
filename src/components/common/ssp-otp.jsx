@@ -9,8 +9,6 @@ import styles from "./Loader.module.css";
 
 import { theme } from "./theme";
 
-
-
 export default function OtpUI() {
   const [otp, setOtp] = React.useState("");
   const [isLoading, setIsLoading] = useState("");

@@ -23,7 +23,7 @@ export default function BasicCard() {
         justify="center"
       >
         <CardContent>
-          <Box sx={{ display: "inline-flex",mt:3 }}>
+          <Box sx={{ display: "inline-flex", mt: 3 }}>
             <img src="/check-circle.svg" />
             &nbsp;&nbsp;&nbsp;
             <Typography
@@ -36,7 +36,7 @@ export default function BasicCard() {
               DL Verified
             </Typography>
           </Box>
-          <Box sx={{ flexGrow: 1, mt:5 }}>
+          <Box sx={{ flexGrow: 1, mt: 5 }}>
             <Grid
               container
               spacing={{ xs: 2, md: 3 }}
@@ -54,14 +54,13 @@ export default function BasicCard() {
               ))}
             </Grid>
           </Box>
-          <Typography sx={{ fontSize: 14, fontWeight: 500, mb: 3,mt:5 }}>
+          <Typography sx={{ fontSize: 14, fontWeight: 500, mb: 3, mt: 5 }}>
             "Great news! Your license is verified, and we're generating your
             rental agreement.
           </Typography>
           <Typography sx={{ fontSize: 14, fontWeight: 500 }}>
             We'll notify you once it's ready for review and e-signature.”
           </Typography>
-        
         </CardContent>
       </Grid>
     </Card>

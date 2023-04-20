@@ -14,24 +14,21 @@ const Img = styled("img")({
 
 export default function ComplexGrid() {
   return (
-      <Grid
-        container
-        spacing={0}
-      >
-        <Grid item xs={6} md={12} container>
-          <Grid item xs container direction="column" spacing={2}>
-            <Grid item xs>
-              <Typography variant="subtitle1" component="div">
-                <b> 1. Upload/Capture DL front image</b>
-              </Typography>
-            </Grid>
+    <Grid container spacing={0}>
+      <Grid item xs={6} md={12} container>
+        <Grid item xs container direction="column" spacing={2}>
+          <Grid item xs>
+            <Typography variant="subtitle1" component="div">
+              <b> 1. Upload/Capture DL front image</b>
+            </Typography>
           </Grid>
         </Grid>
-        <Grid item xs={6}>
-          <ButtonBase sx={{ width: 100, height: 100 }}>
-            <Img alt="complex" src="/dl_logo.svg" />
-          </ButtonBase>
-        </Grid>
       </Grid>
+      <Grid item xs={6}>
+        <ButtonBase sx={{ width: 100, height: 100 }}>
+          <Img alt="complex" src="/dl_logo.svg" />
+        </ButtonBase>
+      </Grid>
+    </Grid>
   );
 }

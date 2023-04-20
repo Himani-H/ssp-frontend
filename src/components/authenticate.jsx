@@ -16,16 +16,16 @@ const theme = createTheme({
 export default function Authenticate() {
   return (
     <>
-    <ThemeProvider theme={theme}>
-      <Header />
-      <CssBaseline />
-      <Box>
-        <Stack direction="row" justifyContent="space-between">
-          <SideImage />
-          <OtpUi />
-        </Stack>
-      </Box>
-    </ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <Header />
+        <CssBaseline />
+        <Box>
+          <Stack direction="row" justifyContent="space-between">
+            <SideImage />
+            <OtpUi />
+          </Stack>
+        </Box>
+      </ThemeProvider>
     </>
   );
 }

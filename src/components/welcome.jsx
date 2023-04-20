@@ -4,7 +4,6 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Loader from "./common/ssp-loader";
 
-
 export default function Welcome() {
   return (
     <>
@@ -20,7 +19,7 @@ export default function Welcome() {
           marginTop: "40vh",
         }}
       />
-      <Loader isprimary="true" style={{marginTop:"2%"}} />
+      <Loader isprimary="true" style={{ marginTop: "2%" }} />
     </>
   );
 }
