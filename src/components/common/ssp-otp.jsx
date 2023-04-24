@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { MuiOtpInput } from "mui-one-time-password-input";
 import OtpTimer from "otp-timer";
-import { Box, Button, Typography, Grid } from "@mui/material";
+import { Box, Button, Typography, Grid, Container } from "@mui/material";
 import Loader from "./ssp-loader";
 import { ThemeProvider } from "@mui/material/styles";
 import Footer from "./ssp-footer";
@@ -12,7 +12,7 @@ import { theme } from "./theme";
 export function matchIsNumeric(text) {
   const isNumber = typeof text === "number";
   console.log(isNumber);
-  const isString = matchIsString(text)
+  const isString = matchIsString(text);
   return isNumber && !isNaN(Text(text));
 }
 
@@ -36,80 +36,89 @@ export default function OtpUI() {
   };
   return (
     <>
-    <Box  sx={{display:"flex",flexDirection:"column"}}>
-      <Grid sx={{ padding: 5, height: "100%" }}>
-        <Box>
-          <ThemeProvider theme={theme}>
-            <Typography variant="heading" component="div" sx={{ flexGrow: 1 }}>
-              Enter One Time Password
-            </Typography>
-            <br></br>
+      <Container>
+        <Box sx={{ display: "flex", flexDirection: "column" }}>
+        <ThemeProvider theme={theme}>
+          <Grid sx={{ height: "100%" }}>
+            <Box>
+             
+                <Typography
+                  variant="heading"
+                  component="div"
+                  sx={{ flexGrow: 1 }}
+                >
+                  Enter One Time Password
+                </Typography>
+                <br></br>
 
-            <Typography
-              variant="subHeading"
-              component="div"
-              sx={{ flexGrow: 1 }}
-            >
-              Enter a 6-digit OTP sent to your mobile “XXXXXXX999”
-            </Typography>
+                <Typography
+                  variant="subHeading"
+                  component="div"
+                  sx={{ flexGrow: 1 }}
+                >
+                  Enter a 6-digit OTP sent to your mobile “XXXXXXX999”
+                </Typography>
 
-            <Box marginTop={10}>
-              <MuiOtpInput
-                TextFieldsProps={{
-                  size: "small",
-                  variant: "standard",
-                  color: "warning"
-                }}
-                length={6}
-                value={otp}
-                onChange={handleChange}
-                validateChar={validateChar}
-              />
+                <Box marginTop={5}>
+                  <MuiOtpInput
+                    TextFieldsProps={{
+                      size: "small",
+                      variant: "standard",
+                      color: "warning",
+                    }}
+                    length={6}
+                    value={otp}
+                    onChange={handleChange}
+                    validateChar={validateChar}
+                  />
+                </Box>
+
+                <Box marginTop={4} textAlign="center">
+                  <Button
+                    variant="contained"
+                    fullWidth={true}
+                    disabled={otp.length < 6}
+                    component="div"
+                    onClick={verifyOTP}
+                  >
+                    {isLoading ? <Loader /> : "Verify and Proceed"}
+                  </Button>
+                </Box>
+
+                <Box
+                  component="div"
+                  sx={{
+                    display: "flex",
+                    m: 2,
+                    p: 1,
+                    justifyContent: "center",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  <Typography variant="subHeading1">
+                    Didn’t receive OTP?
+                  </Typography>
+                  &nbsp;
+                  <Box className={styles.otp}>
+                    <OtpTimer
+                      seconds={30}
+                      minutes={1}
+                      resend={handleClick}
+                      text="Retry in"
+                      ButtonText="Resend OTP"
+                      buttonColor="#FF5F00"
+                      background="white"
+                    />
+                  </Box>
+                </Box>
+              
+              <Footer />
             </Box>
-
-            <Box marginTop={10} textAlign="center">
-              <Button
-                variant="contained"
-                fullWidth={true}
-                disabled={otp.length < 6}
-                component="div"
-                onClick={verifyOTP}
-              >
-                {isLoading ? <Loader /> : "Verify and Proceed"}
-              </Button>
-            </Box>
-
-            <Box
-              component="div"
-              sx={{
-                display: "flex",
-                m: 1,
-                p: 1,
-                justifyContent: "center",
-                whiteSpace: "nowrap",
-              }}
-            >
-              <Typography variant="subHeading1">Didn’t receive OTP?</Typography>
-              &nbsp;
-              <Box className={styles.otp}>
-                <OtpTimer
-                  seconds={30}
-                  minutes={1}
-                  resend={handleClick}
-                  text="Retry in"
-                  ButtonText="Resend OTP"
-                  buttonColor="#FF5F00"
-                  background="white"
-                />
-              </Box>
-            </Box>
+            {/* <Footer /> */}
+          </Grid>
           </ThemeProvider>
-          <Footer />
         </Box>
-        {/* <Footer /> */}
-      </Grid>
-      </Box>
-     
+      </Container>
     </>
   );
 }

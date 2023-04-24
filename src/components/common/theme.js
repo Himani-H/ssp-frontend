@@ -6,8 +6,10 @@ export const theme = createTheme({
       fontSize: "1.25rem",
       fontWeight: 600,
       textAlign: "left",
+      marginTop: "6rem",
       "@media (min-width:600px)": {
-        fontSize: "1.5rem",
+        fontSize: "2rem",
+        marginTop: "10rem",
       },
     },
     subHeading: {
@@ -69,5 +71,15 @@ export const theme = createTheme({
         },
       },
     },
+    MuiGrid : {
+      styleOverrides: {
+        root :{
+          "@media (min-width:600px)": {
+            paddingLeft: "2rem",
+            paddingRight: "2rem"
+          },
+        }
+      }
+    }
   },
 });
