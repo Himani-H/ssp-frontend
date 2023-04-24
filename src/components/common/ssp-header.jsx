@@ -5,12 +5,12 @@ import { theme } from "./theme";
 
 export default function Header() {
   return (
-    <AppBar position="static" sx={{ backgroundColor: "white" }}>
-      <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <AppBar position="static">
         <Toolbar>
           <img src="/ssp-logo.svg" alt="SIXT" className={styles.responsive} />
         </Toolbar>
-      </ThemeProvider>
-    </AppBar>
+      </AppBar>
+    </ThemeProvider>
   );
 }

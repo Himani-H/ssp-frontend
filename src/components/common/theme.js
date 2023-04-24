@@ -61,19 +61,13 @@ export const theme = createTheme({
         },
       },
     },
-    MuiDivider : {
-      styleOverrides : {
-        root : {
-          width : "90%",
-          marginLeft : "auto",
-          marginRight : "auto",
-          "@media (min-width:700px)": {
-            width : "93%",
-            marginLeft : "auto",
-            marginRight : "auto",
-          },
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "white",
+          boxShadow: "0px 2px 34px 2px rgba(0, 0, 0, 0.08)",
         },
       },
-    }
+    },
   },
 });
