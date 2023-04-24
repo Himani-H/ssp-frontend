@@ -1,31 +1,21 @@
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-
 export default function Footer() {
   return (
     <>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          flex: "1",
-          height: "100%",
+      <div
+        style={{
+          position: "absolute",
+          color: '#595959',
+          fontSize: '10px',
+          right: 0,
+          left: 0,
+          bottom: 0,
+          // height:' 20px',
+          margin: 'auto',
+          textAlign: 'center'
         }}
       >
-        <Typography
-          variant="h6"
-          component="div"
-          sx={{
-            color: "black",
-            fontSize: 10,
-            position: "fixed",
-            bottom: 0,
-            padding: 2,
-          }}
-        >
-          Copyright © 2023 SIXT Australia
-        </Typography>
-      </Box>
+        Copyright © 2023 SIXT Australia
+      </div>
     </>
   );
 }

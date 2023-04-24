@@ -1,16 +1,16 @@
-import Image from "next/image";
-
 import { AppBar, Toolbar } from "@mui/material";
-import styles from "./header.module.css";
+import styles from "./Header.module.css";
+import { ThemeProvider } from "@mui/material/styles";
+import { theme } from "./theme";
 
 export default function Header() {
   return (
     <AppBar position="static" sx={{ backgroundColor: "white" }}>
-      <Toolbar>
-        <div className={styles.custome_size} style={{ position: "relative" }}>
-          <Image src="/ssp-logo.svg" alt="SIXT" layout="fill" />
-        </div>
-      </Toolbar>
+      <ThemeProvider theme={theme}>
+        <Toolbar>
+          <img src="/ssp-logo.svg" alt="SIXT" className={styles.responsive} />
+        </Toolbar>
+      </ThemeProvider>
     </AppBar>
   );
 }

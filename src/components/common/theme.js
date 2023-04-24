@@ -51,5 +51,29 @@ export const theme = createTheme({
         },
       },
     },
+    MuiToolbar: {
+      styleOverrides: {
+        root: {
+          "@media (min-width:700px)": {
+            paddingLeft: "57px",
+            paddingRight: "24px",
+          },
+        },
+      },
+    },
+    MuiDivider : {
+      styleOverrides : {
+        root : {
+          width : "90%",
+          marginLeft : "auto",
+          marginRight : "auto",
+          "@media (min-width:700px)": {
+            width : "93%",
+            marginLeft : "auto",
+            marginRight : "auto",
+          },
+        },
+      },
+    }
   },
 });
