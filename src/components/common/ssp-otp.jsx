@@ -9,15 +9,8 @@ import styles from "./Loader.module.css";
 
 import { theme } from "./theme";
 
-export function matchIsNumeric(text) {
-  const isNumber = typeof text === "number";
-  console.log(isNumber);
-  const isString = matchIsString(text);
-  return isNumber && !isNaN(Text(text));
-}
-
 const validateChar = (value, index) => {
-  return matchIsNumeric(value);
+  return !isNaN(Number(value));
 };
 
 export default function OtpUI() {
